@@ -1,5 +1,9 @@
 import React from "react";
 import axios from "axios";
+import "../App.css"
+import apple from "../images/apple.png"
+import veg from "../images/veg.png"
+import grapes from "../images/grapes.png"
 
 function Cart() {
   const amount = 500;
@@ -35,138 +39,71 @@ function Cart() {
     rzp1.open();
   };
   return (
-    <div className="body">
-      <div className="card">
-        <div className="row">
-          <div className="col-md-8 cart">
-            <div className="title">
-              <div className="row">
-                <div className="col">
-                  <h4>
-                    <b>Shopping Cart</b>
-                  </h4>
-                </div>
-                <div className="col align-self-center text-right text-muted">
-                  3 items
-                </div>
-              </div>
-            </div>
-            <div className="row border-top border-bottom">
-              <div className="row main align-items-center">
-                <div className="col-2">
-                  <img
-                    className="img-fluid"
-                    src="https://i.imgur.com/1GrakTl.jpg"
-                  />
-                </div>
-                <div className="col">
-                  <div className="row text-muted">Shirt</div>
-                  <div className="row">Cotton T-shirt</div>
-                </div>
-                <div className="col">
-                  <a href="#">-</a>
-                  <a href="#" className="border">
-                    1
-                  </a>
-                  <a href="#">+</a>
-                </div>
-                <div className="col">
-                  € 44.00 <span className="close">✕</span>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="row main align-items-center">
-                <div className="col-2">
-                  <img
-                    className="img-fluid"
-                    src="https://i.imgur.com/ba3tvGm.jpg"
-                  />
-                </div>
-                <div className="col">
-                  <div className="row text-muted">Shirt</div>
-                  <div className="row">Cotton T-shirt</div>
-                </div>
-                <div className="col">
-                  <a href="#">-</a>
-                  <a href="#" className="border">
-                    1
-                  </a>
-                  <a href="#">+</a>
-                </div>
-                <div className="col">
-                  € 44.00 <span className="close">✕</span>
-                </div>
-              </div>
-            </div>
-            <div className="row border-top border-bottom">
-              <div className="row main align-items-center">
-                <div className="col-2">
-                  <img
-                    className="img-fluid"
-                    src="https://i.imgur.com/pHQ3xT3.jpg"
-                  />
-                </div>
-                <div className="col">
-                  <div className="row text-muted">Shirt</div>
-                  <div className="row">Cotton T-shirt</div>
-                </div>
-                <div className="col">
-                  <a href="#">-</a>
-                  <a href="#" className="border">
-                    1
-                  </a>
-                  <a href="#">+</a>
-                </div>
-                <div className="col">
-                  € 44.00 <span className="close">✕</span>
-                </div>
-              </div>
-            </div>
-            <div className="back-to-shop">
-              <a href="#">←</a>
-              <span className="text-muted">Back to shop</span>
-            </div>
-          </div>
-          <div className="col-md-4 summary">
-            <div>
-              <h5>
-                <b>Summary</b>
-              </h5>
-            </div>
-            <hr />
-            <div className="row">
-              <div className="col" style={{ paddingLeft: 0 }}>
-                ITEMS 3
-              </div>
-              <div className="col text-right">€ 132.00</div>
-            </div>
-            <form>
-              <p>SHIPPING</p>
-              <select>
-                <option className="text-muted">Standard-Delivery- €5.00</option>
-              </select>
-              <p>GIVE CODE</p>
-              <input id="code" placeholder="Enter your code" />
-            </form>
-            <div
-              className="row"
-              style={{
-                borderTop: "1px solid rgba(0,0,0,.1)",
-                padding: "2vh 0",
-              }}
-            >
-              <div className="col">TOTAL PRICE</div>
-              <div className="col text-right">{amount}</div>
-            </div>
-            <button className="btn" onClick={checkoutHandler}>
-              CHECKOUT
-            </button>
-          </div>
-        </div>
-      </div>
+    <div class="main-body">
+     <div class="CartContainer">
+   	   <div class="Header">
+   	   	<h3 class="Heading">Shopping Cart</h3>
+   	   	<h5 class="Action">Remove all</h5>
+   	   </div>
+
+   	   <div class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img src={apple} style={{ height:"120px" }} />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Apple Juice</h1>
+   	   	  	<h3 class="subtitle">250ml</h3>
+   	   	  	<img src={veg} style={{ height:"30px" }}/>
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">2</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">$2.99</div>
+   	   	  	<div class="save"><u>Save for later</u></div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+
+   	   <div class="Cart-Items pad">
+   	   	  <div class="image-box">
+   	   	  	<img src={grapes} style={{ height:"120px" }} />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">Grapes Juice</h1>
+   	   	  	<h3 class="subtitle">250ml</h3>
+   	   	  	<img src={veg} style={{ height:"30px" }}/>
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<div class="btn">+</div>
+   	   	  	<div class="count">1</div>
+   	   	  	<div class="btn">-</div>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">$3.19</div>
+   	   	  	<div class="save"><u>Save for later</u></div>
+   	   	  	<div class="remove"><u>Remove</u></div>
+   	   	  </div>
+   	   </div>
+   	 <hr/> 
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Sub-Total</div>
+   	 		<div class="items">2 items</div>
+   	 	</div>
+   	 	<div class="total-amount">$6.18</div>
+   	 </div>
+   	 <button class="button" onClick={checkoutHandler}>Checkout</button></div>
+   </div>
     </div>
   );
 }
 
 export default Cart;
+
+// <button className="btn" onClick={checkoutHandler}>
+//               CHECKOUT
+//             </button>
